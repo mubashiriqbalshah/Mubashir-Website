@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume — Mubashir Iqbal | Full-Stack Web Developer</title>
+    <meta name="description" content="Resume of Mubashir Iqbal — Full-Stack Web Developer based in Lahore, Pakistan. 11+ years of design and development experience. React, Node.js, MongoDB.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mubashir-iqbal.vercel.app/resume.html">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://mubashir-iqbal.vercel.app/resume.html">
+    <meta property="og:title" content="Resume — Mubashir Iqbal | Full-Stack Web Developer">
+    <meta property="og:description" content="11+ years of design and development experience. View full resume online or download as PDF.">
+    <meta property="og:image" content="https://mubashir-iqbal.vercel.app/assets/og-image.svg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Resume — Mubashir Iqbal">
+    <meta name="twitter:description" content="Full-Stack Web Developer with 11+ years experience.">
+    <meta name="twitter:image" content="https://mubashir-iqbal.vercel.app/assets/og-image.svg">
+
+    <meta name="theme-color" content="#0a0a0f">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='50%25' stop-color='%238b5cf6'/%3E%3Cstop offset='100%25' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-family='Arial,sans-serif' font-size='52' font-weight='800' text-anchor='middle' fill='white'%3EM%3C/text%3E%3C/svg%3E">
+    <script>
+        (function(){
+            try {
+                if (localStorage.getItem('mi_theme') === 'light') {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { background: var(--bg); padding: 40px 20px; }
+
+        .resume-toolbar {
+            max-width: 1100px;
+            margin: 0 auto 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .resume-toolbar .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .resume-toolbar .back-link:hover { color: var(--text); }
+        .resume-toolbar .actions { display: flex; gap: 10px; }
+        .resume-toolbar .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-strong);
+            background: var(--surface);
+            color: var(--text);
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .resume-toolbar .btn-action:hover {
+            background: var(--surface-hover);
+            border-color: var(--accent);
+        }
+        .resume-toolbar .btn-action.primary {
+            background: var(--gradient);
+            border: none;
+        }
+
+        .resume {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .resume-sidebar {
+            background: linear-gradient(180deg, #0e1530 0%, #0a0f24 100%);
+            padding: 40px 30px;
+            color: var(--text);
+            position: relative;
+        }
+        .resume-sidebar::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--gradient);
+        }
+        .resume-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 6px;
+            letter-spacing: -0.02em;
+        }
+        .resume-title {
+            color: #06b6d4;
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-bottom: 28px;
+            padding-bottom: 18px;
+            border-bottom: 2px solid #06b6d4;
+            display: inline-block;
+        }
+        .sidebar-block { margin-bottom: 28px; }
+        .sidebar-heading {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #06b6d4;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid rgba(6, 182, 212, 0.3);
+        }
+        .sidebar-list {
+            list-style: none;
+            font-size: 0.88rem;
+            color: #d8d8e8;
+        }
+        .sidebar-list li { margin-bottom: 6px; line-height: 1.45; }
+        .sidebar-list a { color: #d8d8e8; transition: color 0.2s; }
+        .sidebar-list a:hover { color: #06b6d4; }
+        .skill-group { margin-bottom: 12px; }
+        .skill-group-title {
+            font-weight: 600;
+            color: #fff;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+        .skill-group-items {
+            font-size: 0.85rem;
+            color: #c0c0d0;
+            line-height: 1.5;
+        }
+        .design-list, .lang-list {
+            font-size: 0.88rem;
+            color: #d8d8e8;
+            line-height: 1.7;
+        }
+        .design-list li::before {
+            content: '• ';
+            color: #06b6d4;
+            font-weight: bold;
+            margin-right: 4px;
+        }
+        .design-list li { list-style: none; }
+        .edu-item, .cert-item { margin-bottom: 14px; }
+        .edu-degree, .cert-title {
+            font-weight: 600;
+            color: #fff;
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+        .edu-detail, .cert-detail {
+            font-size: 0.83rem;
+            color: #b0b0c0;
+            line-height: 1.4;
+        }
+
+        .resume-main {
+            padding: 50px 45px;
+            background: var(--bg-2);
+        }
+        .main-section { margin-bottom: 36px; }
+        .main-section:last-child { margin-bottom: 0; }
+        .main-heading {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 18px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+        .main-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+        .summary-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+        .summary-text:last-child { margin-bottom: 0; }
+
+        .project-block, .exp-block { margin-bottom: 24px; }
+        .project-block:last-child, .exp-block:last-child { margin-bottom: 0; }
+        .project-title, .exp-title {
+            font-weight: 700;
+            color: var(--text);
+            font-size: 1.05rem;
+            margin-bottom: 4px;
+        }
+        .project-meta, .exp-meta {
+            color: #06b6d4;
+            font-size: 0.88rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        .project-desc, .exp-desc {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.65;
+            margin-bottom: 8px;
+        }
+        .project-stack {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .project-stack strong { color: var(--text); }
+        .exp-list {
+            list-style: none;
+            margin-top: 6px;
+        }
+        .exp-list li {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin-bottom: 6px;
+            padding-left: 18px;
+            position: relative;
+        }
+        .exp-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        @media (max-width: 1100px) {
+            .resume { max-width: 100%; }
+            .resume-toolbar { max-width: 100%; }
+        }
+
+        @media (max-width: 980px) {
+            .resume { grid-template-columns: 260px 1fr; }
+            .resume-sidebar { padding: 30px 22px; }
+            .resume-main { padding: 36px 28px; }
+            .resume-name { font-size: 1.8rem; }
+            .main-heading { font-size: 1.25rem; }
+        }
+
+        @media (max-width: 760px) {
+            body { padding: 20px 12px; }
+            .resume { grid-template-columns: 1fr; border-radius: var(--radius); }
+            .resume-sidebar { padding: 28px 22px; }
+            .resume-main { padding: 28px 22px; }
+            .resume-toolbar { margin-bottom: 16px; }
+            .resume-toolbar .btn-action { padding: 8px 14px; font-size: 0.85rem; }
+        }
+
+        @media print {
+            body {
+                background: #fff;
+                padding: 0;
+            }
+            .resume-toolbar { display: none; }
+            .resume {
+                box-shadow: none;
+                border: none;
+                border-radius: 0;
+                max-width: 100%;
+                grid-template-columns: 280px 1fr;
+            }
+            .resume-sidebar {
+                background: #0e1530 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .resume-main { background: #fff; }
+            .main-heading { color: #0e1530; }
+            .summary-text, .project-desc, .exp-desc, .exp-list li { color: #333; }
+            .project-title, .exp-title { color: #0e1530; }
+            .project-stack strong { color: #0e1530; }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-toolbar">
+        <a href="index.html" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Portfolio
+        </a>
+        <div class="actions">
+            <button class="btn-action" onclick="window.print()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                Print / Save as PDF
+            </button>
+        </div>
+    </div>
+
+    <article class="resume" id="resumeRoot">
+        <aside class="resume-sidebar">
+            <h1 class="resume-name" id="resumeName">MUBASHIR<br>IQBAL</h1>
+            <div class="resume-title" id="resumeTitle"></div>
+
+            <div class="sidebar-block">
+                <h2 class="sidebar-heading">Contact</h2>
+                <ul class="sidebar-list" id="resumeContact"></ul>
+            </div>
+
+            <div class="sidebar-block">
+                <h2 class="sidebar-heading">Online</h2>
+                <ul class="sidebar-list" id="resumeOnline"></ul>
+            </div>
+
+            <div class="sidebar-block">
+                <h2 class="sidebar-heading">Technical Skills</h2>
+                <div id="resumeTechSkills"></div>
+            </div>
+
+            <div class="sidebar-block">
+                <h2 class="sidebar-heading">Design Skills</h2>
+                <ul class="design-list" id="resumeDesignSkills"></ul>
+            </div>
+
+            <div class="sidebar-block">
+                <h2 class="sidebar-heading">Education</h2>
+                <div id="resumeEducation"></div>
+            </div>
+
+            <div class="sidebar-block">
+                <h2 class="sidebar-heading">Certifications</h2>
+                <div id="resumeCertifications"></div>
+            </div>
+
+            <div class="sidebar-block">
+                <h2 class="sidebar-heading">Languages</h2>
+                <div class="lang-list" id="resumeLanguages"></div>
+            </div>
+        </aside>
+
+        <main class="resume-main">
+            <section class="main-section">
+                <h2 class="main-heading">Professional Summary</h2>
+                <div id="resumeSummary"></div>
+            </section>
+
+            <section class="main-section">
+                <h2 class="main-heading">Featured Projects</h2>
+                <div id="resumeProjects"></div>
+            </section>
+
+            <section class="main-section">
+                <h2 class="main-heading">Professional Experience</h2>
+                <div id="resumeExperience"></div>
+            </section>
+        </main>
+    </article>
+
+    <script src="data.js"></script>
+    <script>
+        function escHtml(s) {
+            return String(s == null ? '' : s)
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+        }
+        function nl2br(s) { return escHtml(s).replace(/\n/g, '<br>'); }
+
+        function renderResume(data) {
+            const r = data.resume || {};
+            const about = data.about || {};
+            const info = about.info || {};
+
+            const heroName = (data.hero && data.hero.name) || 'Mubashir Iqbal';
+            const nameParts = heroName.trim().split(/\s+/);
+            const firstWord = (nameParts[0] || '').toUpperCase();
+            const restWords = nameParts.slice(1).join(' ').toUpperCase();
+            document.getElementById('resumeName').innerHTML = restWords
+                ? escHtml(firstWord) + '<br>' + escHtml(restWords)
+                : escHtml(firstWord);
+
+            document.getElementById('resumeTitle').textContent = r.title || 'Full-Stack Web Developer';
+
+            const contactLines = [];
+            if (info.location) contactLines.push(escHtml(info.location));
+            if (info.phone) contactLines.push(escHtml(info.phone));
+            if (info.email) contactLines.push('<a href="mailto:' + escHtml(info.email) + '">' + escHtml(info.email) + '</a>');
+            document.getElementById('resumeContact').innerHTML = contactLines.map(l => '<li>' + l + '</li>').join('');
+
+            const onlineLinks = r.onlineLinks || [];
+            document.getElementById('resumeOnline').innerHTML = onlineLinks.map(l =>
+                '<li><a href="' + escHtml(l.url) + '" target="_blank" rel="noopener">' + escHtml(l.label) + '</a></li>'
+            ).join('');
+
+            const techSkills = r.technicalSkills || [];
+            document.getElementById('resumeTechSkills').innerHTML = techSkills.map(group =>
+                '<div class="skill-group">' +
+                    '<div class="skill-group-title">' + escHtml(group.category) + '</div>' +
+                    '<div class="skill-group-items">' + nl2br(group.items) + '</div>' +
+                '</div>'
+            ).join('');
+
+            const designSkills = r.designSkills || [];
+            document.getElementById('resumeDesignSkills').innerHTML = designSkills.map(s =>
+                '<li>' + escHtml(s) + '</li>'
+            ).join('');
+
+            const allEdu = data.education || [];
+            const eduItems = allEdu.filter(e => (e.tag || '').toLowerCase() !== 'certificate');
+            const certItems = allEdu.filter(e => (e.tag || '').toLowerCase() === 'certificate');
+
+            document.getElementById('resumeEducation').innerHTML = eduItems.map(e =>
+                '<div class="edu-item">' +
+                    '<div class="edu-degree">' + escHtml(e.title) + '</div>' +
+                    '<div class="edu-detail">' + escHtml(e.school || '') + (e.location ? '<br>' + escHtml(e.location) : '') + '</div>' +
+                '</div>'
+            ).join('');
+
+            document.getElementById('resumeCertifications').innerHTML = certItems.map(c =>
+                '<div class="cert-item">' +
+                    '<div class="cert-title">' + escHtml(c.title) + '</div>' +
+                    '<div class="cert-detail">' + escHtml(c.school || '') + '</div>' +
+                '</div>'
+            ).join('');
+
+            const langs = (data.languages || []).map(l => escHtml(l.name)).join(' · ');
+            document.getElementById('resumeLanguages').textContent = langs || 'English · Urdu · Hindi';
+
+            const summary = r.summary || [];
+            document.getElementById('resumeSummary').innerHTML = summary.map(p =>
+                '<p class="summary-text">' + escHtml(p) + '</p>'
+            ).join('');
+
+            const projects = r.featuredProjects || [];
+            document.getElementById('resumeProjects').innerHTML = projects.map(p => {
+                const titleLink = p.url
+                    ? ' — <a href="' + escHtml(p.url) + '" target="_blank" rel="noopener" style="color:inherit;">' + escHtml(p.urlLabel || p.url) + '</a>'
+                    : '';
+                const meta = [p.type, p.year].filter(Boolean).join(' · ');
+                return '<div class="project-block">' +
+                    '<div class="project-title">' + escHtml(p.name) + titleLink + '</div>' +
+                    (meta ? '<div class="project-meta">' + escHtml(meta) + '</div>' : '') +
+                    '<p class="project-desc">' + escHtml(p.description) + '</p>' +
+                    (p.stack ? '<div class="project-stack"><strong>Stack:</strong> ' + escHtml(p.stack) + '</div>' : '') +
+                '</div>';
+            }).join('');
+
+            const exp = r.experienceDetails || [];
+            document.getElementById('resumeExperience').innerHTML = exp.map(e =>
+                '<div class="exp-block">' +
+                    '<div class="exp-title">' + escHtml(e.title) + '</div>' +
+                    '<div class="exp-meta">' + escHtml(e.company) + ' | ' + escHtml(e.period) + '</div>' +
+                    ((e.bullets && e.bullets.length) ? '<ul class="exp-list">' + e.bullets.map(b => '<li>' + escHtml(b) + '</li>').join('') + '</ul>' : '') +
+                '</div>'
+            ).join('');
+        }
+
+        DataStore.fetchFromAPI().then(data => renderResume(data || DataStore.get()));
+    </script>
+</body>
+</html>

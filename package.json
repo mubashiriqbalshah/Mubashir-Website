@@ -1,0 +1,13 @@
+{
+  "name": "mubashir-iqbal-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Mubashir Iqbal with admin panel and database",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.34.0"
+  }
+}
