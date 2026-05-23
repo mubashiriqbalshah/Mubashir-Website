@@ -114,10 +114,10 @@ function renderMarkets(markets) {
 function updateProfileImage(src) {
     const img = document.getElementById('profilePhoto');
     if (!img || !src) return;
+    img.style.display = '';
+    const placeholder = img.nextElementSibling;
+    if (placeholder) placeholder.style.display = 'none';
     if (img.src !== src && !img.src.endsWith(src)) {
-        img.style.display = '';
-        const placeholder = img.nextElementSibling;
-        if (placeholder) placeholder.style.display = 'none';
         img.src = src;
     }
 }
