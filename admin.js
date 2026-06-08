@@ -1338,6 +1338,7 @@ function loadSocialForm() {
     f.linkedin.value = data.social.linkedin;
     f.instagram.value = data.social.instagram;
     f.whatsapp.value = data.social.whatsapp;
+    f.github.value = data.social.github || '';
 }
 
 // ========== FORMS ==========
@@ -1397,7 +1398,8 @@ function setupForms() {
             behance: e.target.behance.value,
             linkedin: e.target.linkedin.value,
             instagram: e.target.instagram.value,
-            whatsapp: e.target.whatsapp.value
+            whatsapp: e.target.whatsapp.value,
+            github: e.target.github.value
         };
         DataStore.set(data);
         showToast('Social links saved');

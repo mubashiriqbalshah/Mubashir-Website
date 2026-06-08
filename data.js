@@ -137,6 +137,13 @@ const DEFAULT_DATA = {
     ],
     projects: [
         {
+            title: 'FreelanceKit',
+            description: 'A full-stack SaaS toolkit for freelancers — an AI proposal writer that crafts tailored, reply-worthy Upwork & Fiverr proposals (powered by Claude) plus a professional invoice generator with PKR and multi-currency PDF export. Built with Next.js, Supabase authentication, and a Node.js API. Open-source on GitHub.',
+            image: 'assets/freelancekit.png',
+            link: 'https://freelancekit-six.vercel.app',
+            tags: ['Next.js', 'React', 'Supabase', 'Node.js', 'AI', 'SaaS']
+        },
+        {
             title: 'Ozawa Traders',
             description: 'Designed and developed the corporate website for Ozawa Traders — a Pakistan-based supplier of industrial, power, and medical equipment with 20+ years of experience. Built clean product catalog pages, responsive navigation, and a CMS-backed admin to manage products serving utilities, hospitals, and enterprises nationwide.',
             image: '',
@@ -178,6 +185,15 @@ const DEFAULT_DATA = {
             'Logo & Branding'
         ],
         featuredProjects: [
+            {
+                name: 'FreelanceKit',
+                urlLabel: 'freelancekit-six.vercel.app',
+                url: 'https://freelancekit-six.vercel.app',
+                type: 'AI SaaS — Proposal Writer & Invoice Generator',
+                year: '2026',
+                description: 'Designed and built a full-stack SaaS product for freelancers from scratch. Features an AI-powered proposal writer that generates tailored Upwork/Fiverr proposals using Claude, and a professional invoice generator with PKR and multi-currency PDF export. Frontend in Next.js with Supabase authentication; backend is a Node.js/Express API. Source published on GitHub.',
+                stack: 'Next.js, React, Supabase, Node.js, Express, Claude AI'
+            },
             {
                 name: 'Ozawa Traders Pvt Ltd',
                 urlLabel: 'ozawatraders.org',
@@ -284,7 +300,8 @@ const DEFAULT_DATA = {
         behance: 'https://www.behance.net/mubashir20e6c9',
         linkedin: 'https://www.linkedin.com/in/mubashiriqbalshah/',
         instagram: 'https://www.instagram.com/mubashirs1985/',
-        whatsapp: 'https://wa.me/923004596768'
+        whatsapp: 'https://wa.me/923004596768',
+        github: 'https://github.com/mubashiriqbalshah'
     },
     submissions: []
 };
